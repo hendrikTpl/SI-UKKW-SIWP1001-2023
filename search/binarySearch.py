@@ -25,6 +25,12 @@
 from typing import List
 from util.decorators import time_decorator
 @time_decorator
+
+class BS():
+    def __init__(self,nums,target) -> None:
+        nums = self.nums
+        target = self.target
+
 def binarySearch(nums, target):
     left, right = 0, len(nums) - 1
     
