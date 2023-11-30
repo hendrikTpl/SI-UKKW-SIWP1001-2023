@@ -7,9 +7,10 @@ tuliskan sebuah fungsi untuk mencari target di dalam nums.
 Jika target ada, maka kembalikan indeksnya. Jika tidak, kembalikan -1.
 
 """
-# from typing import List
-# from util.decorators import time_decorator
+from typing import List
+from util.decorators import time_decorator
 
+@time_decorator
 def linear_search(arr, target):
     for i in range(len(arr)):
         if arr[i] == target:
