@@ -46,10 +46,4 @@ def binarySearch(nums, target):
     
     return -1
 
-number = [-1, 0, 3, 5, 9, 12]
-target = 9
-print(binarySearch(number, target))
 
-number2 = [-1, 0, 3, 5, 9, 12]
-target2 = 2
-print(binarySearch(number2, target2))

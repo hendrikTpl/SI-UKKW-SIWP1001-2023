@@ -9,6 +9,7 @@ Jika target ada, maka kembalikan indeksnya. Jika tidak, kembalikan -1.
 """
 from typing import List
 from util.decorators import time_decorator
+@time_decorator
 
 class LS():
     def __init__(self,arr,target) -> None:
@@ -21,12 +22,11 @@ def linear_search(arr, target):
         if arr[i] == target:
             return i  
     return -1  
-if __name__--"__main__":
 
-    numbers = [4, 2, 5, 1, 7, 3, 6, 8]
-    target = 5
-    LNS = LS()
-    res = LNS(numbers,target)
+   
+   
+numbers = [4, 2, 5, 1, 7, 3, 6, 8]
+target = 5    
 
 result = linear_search(numbers, target)
 
