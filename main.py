@@ -3,6 +3,7 @@ import argparse
 import ast
 from complexity.example import contoh
 from search.linearSearch import LinearSearch
+from search.search import Search
 #tambahkan disini misalnya from sort.nama_algorithma import nama_fungsinya
 
 def parse_input(input_str):
@@ -17,20 +18,19 @@ def parse_input(input_str):
 
 def main ():
     parser = argparse.ArgumentParser(description="mengukur algorithm runtime.")
-    parser.add_argument('algorithm', help='nama algorithm', choices=['linear_search', 'examples']) ### tambahkan disini algoritma yang kalian buat
+    parser.add_argument('algorithm', help='nama algorithm', choices=['linear_search', 'binary_search']) ### tambahkan disini algoritma yang kalian buat
     parser.add_argument('--in_data', type=parse_input, help='Input list in Python list format, e.g., "[1, 2, 3]"')
     parser.add_argument('--target', type=int, help='Target number for search algorithms')
     args = parser.parse_args()
 
     if args.algorithm == 'linear_search':
         if args.in_data is not None and args.target is not None:
-            searcher = LinearSearch()
-            searcher.search(args.in_data, args.target)
-    elif args.algorithm == 'examples':
+            searcher = Search()
+            searcher.ls(args.in_data, args.target)
+    elif args.algorithm == 'binary_search':
         if args.in_data is not None:
-            ex = contoh(args.in_data)
-            # call a method from Examples class here
-            # ex.some_method()
+            searcher = Search()
+            searcher.bs(args.in_data, args.target)
 
 if __name__ == "__main__":
 
