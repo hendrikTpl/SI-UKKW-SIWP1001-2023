@@ -1,12 +1,17 @@
+from typing import List
+from util.decorators import time_decorator
+
 class Search:
     @staticmethod
+    @time_decorator
     def ls(list, target):
         for i in range(len(list)):
             if list[i] == target:
-                return f"Target {target} is found at {i+1}"
+                return f"Target {target} is found at index {i}"
         return "Target not found"
 
     @staticmethod
+    @time_decorator
     def bs(list, target):
         list.sort()
         low = 0
@@ -15,7 +20,7 @@ class Search:
         while low <= high:
             mid = (low + high) // 2
             if list[mid] == target:
-                return f"Target {target} found at {mid+1}"
+                return f"Target {target} found at index {mid}"
             elif list[mid] < target:
                 low = mid + 1
             else:
