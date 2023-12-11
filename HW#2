@@ -1,0 +1,147 @@
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2> git clone https://github.com/hendrikTpl/SI-UKKW-SIWP1001-2023
+Cloning into 'SI-UKKW-SIWP1001-2023'...
+remote: Enumerating objects: 80, done.
+remote: Counting objects: 100% (80/80), done.
+remote: Compressing objects: 100% (57/57), done.
+remote: Total 80 (delta 29), reused 66 (delta 18), pack-reused 0Receiving objects:  33% (27/80)
+Receiving objects: 100% (80/80), 38.07 KiB | 7.61 MiB/s, done.
+Resolving deltas: 100% (29/29), done.
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2> git cd.\ SI-UKKW-SIWP1001-2023
+git: 'cd.\' is not a git command. See 'git --help'.
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2> git cd .\SI-UKKW-SIWP1001-2023
+git: 'cd' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2> git cd. \SI-UKKW-SIWP1001-2023
+git: 'cd.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2> git cd.\ SI-UKKW-SIWP1001-2023
+git: 'cd.\' is not a git command. See 'git --help'.
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2> git cd.\SI-UKKW-SIWP1001-2023
+git: 'cd.\SI-UKKW-SIWP1001-2023' is not a git command. See 'git --help'.
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2> git branch -a
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2>  cd.\SI-UKKW-SIWP1001-2023   
+cd.\SI-UKKW-SIWP1001-2023 : The term 'cd.\SI-UKKW-SIWP1001-2023' is not recognized as the name of a cmdlet, function, script file, or operable program. 
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:2
++  cd.\SI-UKKW-SIWP1001-2023
++  ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (cd.\SI-UKKW-SIWP1001-2023:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2> cd. \SI-UKKW-SIWP1001-2023
+cd. : The term 'cd.' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was 
+included, verify that the path is correct and try again.
+At line:1 char:1
++ cd. \SI-UKKW-SIWP1001-2023
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (cd.:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2> cd .\SI-UKKW-SIWP1001-2023
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git branch -a
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/hw#1
+  remotes/origin/hw#2
+  remotes/origin/hw#2_Peter_Andrian_Priestley_422023020
+  remotes/origin/hw#2_feliciano_422023006
+  remotes/origin/hw#2_hendrik_422023011
+  remotes/origin/hw#2_katherin_monica_422023011
+  remotes/origin/main
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git checkout hw#2
+Switched to a new branch 'hw#2'
+branch 'hw#2' set up to track 'origin/hw#2'.
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git config --local --list
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://github.com/hendrikTpl/SI-UKKW-SIWP1001-2023
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+branch.hw#2.remote=origin
+branch.hw#2.merge=refs/heads/hw#2
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git config --local user.name "willyrusli"
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git config --local user.email "willy.422023024@civitas.ukrida.ac.id"
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git config --local --list
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://github.com/hendrikTpl/SI-UKKW-SIWP1001-2023
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+branch.hw#2.remote=origin
+branch.hw#2.merge=refs/heads/hw#2
+user.name=willyrusli
+user.email=willy.422023024@civitas.ukrida.ac.id
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git checkout -b hw#2_willyrusli_422023024
+Switched to a new branch 'hw#2_willyrusli_422023024'
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git branch
+  hw#2
+* hw#2_willyrusli_422023024
+  main
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git status
+On branch hw#2_willyrusli_422023024
+nothing to commit, working tree clean
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git add binarysearch.py
+fatal: pathspec 'binarysearch.py' did not match any files
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git add .\https://1drv.ms/u/s!And2pZEpchRwjA6s_oKia5wu2wAc?e=h5QCxF 
+fatal: pathspec '.\https://1drv.ms/u/s!And2pZEpchRwjA6s_oKia5wu2wAc?e=h5QCxF' did not match any files
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git commit -m "tugas hw#2" 
+On branch hw#2_willyrusli_422023024
+nothing to commit, working tree clean
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git status
+On branch hw#2_willyrusli_422023024
+nothing to commit, working tree clean
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git push --set-upstream origin hw#2_willyrusli_422023024
+info: please complete authentication in your browser...
+remote: Permission to hendrikTpl/SI-UKKW-SIWP1001-2023.git denied to willyrusli.
+fatal: unable to access 'https://github.com/hendrikTpl/SI-UKKW-SIWP1001-2023/': The requested URL returned error: 403
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git remote -v
+origin  https://github.com/hendrikTpl/SI-UKKW-SIWP1001-2023 (fetch)
+origin  https://github.com/hendrikTpl/SI-UKKW-SIWP1001-2023 (push)
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git remote add SI-UKKW-SIWP1001-2023 https://github.com/hendrikTpl/SI-UKKW-SIWP1001-2023
+info: please complete authentication in your browser...
+remote: Permission to hendrikTpl/SI-UKKW-SIWP1001-2023.git denied to willyrusli.
+fatal: unable to access 'https://github.com/hendrikTpl/SI-UKKW-SIWP1001-2023/': The requested URL returned error: 403
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git branch -a
+  hw#2
+* hw#2_willyrusli_422023024
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/hw#1
+  remotes/origin/hw#2
+  remotes/origin/hw#2_Peter_Andrian_Priestley_422023020
+  remotes/origin/hw#2_feliciano_422023006
+  remotes/origin/hw#2_hendrik_422023011
+  remotes/origin/hw#2_katherin_monica_422023011
+  remotes/origin/main
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git remote add SI-UKKW-SIWP1001-2023 https://1drv.ms/u/s!And2pZEpchRwjA6s_oKia5wu2wAc?e=3nrw2a
+error: remote SI-UKKW-SIWP1001-2023 already exists.
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git remote add SI-UKKW-SIWP1001-2023 https://github.com/hendrikTpl/SI-UKKW-SIWP1001-2023/tree/main/complexity
+error: remote SI-UKKW-SIWP1001-2023 already exists.
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023> git branch -a
+  hw#2
+* hw#2_willyrusli_422023024
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/hw#1
+  remotes/origin/hw#2
+  remotes/origin/hw#2_Peter_Andrian_Priestley_422023020
+  remotes/origin/hw#2_feliciano_422023006
+  remotes/origin/hw#2_hendrik_422023011
+  remotes/origin/hw#2_katherin_monica_422023011
+  remotes/origin/main
+PS C:\Users\jessi\OneDrive\Desktop\Tugas HW#2\SI-UKKW-SIWP1001-2023>
