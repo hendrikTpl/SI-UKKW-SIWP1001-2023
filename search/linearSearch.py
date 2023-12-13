@@ -8,7 +8,7 @@ Jika target ada, maka kembalikan indeksnya. Jika tidak, kembalikan -1.
 
 """
 from typing import List
-from util.decorators import time_decorator
+from utils.decorators import time_decorator
 @time_decorator
 
 class LS():
@@ -25,23 +25,3 @@ def linear_search(arr, target):
 
    
    
-numbers = [4, 2, 5, 1, 7, 3, 6, 8]
-target = 5    
-
-result = linear_search(numbers, target)
-
-if result != -1:
-    print(f"Target {target} found at index: {result}")
-else:
-    print(f"Target {target} not found in the array.")
-
-numbers = [4, 2, 5, 1, 7, 3, 6, 8]
-target = 9
-
-result = linear_search(numbers, target)
-
-if result != -1:
-    print(f"Target {target} found at index: {result}")
-else:
-    print(f"Target {target} not found in the array.")
-    pass

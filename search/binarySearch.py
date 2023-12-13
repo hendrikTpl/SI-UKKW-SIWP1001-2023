@@ -23,7 +23,8 @@
 
 # """
 from typing import List
-from util.decorators import time_decorator
+from utils.decorators import time_decorator
+
 @time_decorator
 
 class BS():
