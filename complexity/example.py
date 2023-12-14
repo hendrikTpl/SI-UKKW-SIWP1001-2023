@@ -3,7 +3,7 @@ example of time-complexity
 """
 from util.decorators import time_decorator
 
-class contoh():
+class contoh(self):
     def __init__(self, arr):
         self.arr = arr
 

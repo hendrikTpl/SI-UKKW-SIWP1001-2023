@@ -1,7 +1,7 @@
 import time 
 import argparse
 import ast
-from complexity.example import contoh
+from complexity.example import contoh #folder.nama_file import nama_kelas
 from search.linearSearch import LinearSearch
 #tambahkan disini misalnya from sort.nama_algorithma import nama_fungsinya
 
@@ -29,6 +29,7 @@ def main ():
     elif args.algorithm == 'examples':
         if args.in_data is not None:
             ex = contoh(args.in_data)
+            ex.find_max()
             # call a method from Examples class here
             # ex.some_method()
 
