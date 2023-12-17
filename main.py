@@ -46,7 +46,3 @@ if __name__ == "__main__":
     # t_exec = t2 - t1
 
     # print("Running time of t_constant: {}".format(t_exec))
-
-
-
-

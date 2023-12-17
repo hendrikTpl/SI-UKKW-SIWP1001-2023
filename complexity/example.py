@@ -1,14 +1,21 @@
 """
 example of time-complexity 
 """
-from util.decorators import time_decorator
+# from util.decorators import time_decorator
+import sys
+import os
+current_script_path = os.path.abspath(__file__)
+project_root = os.path.dirname(os.path.dirname(current_script_path))
+if project_root not in sys.path:
+    sys.path.append(project_root)
+from util.time_measurement import time_function,  CodeTimer
 
 class contoh():
     def __init__(self, arr):
         self.arr = arr
 
     # contoh O(1) atau Constant Time Complexity
-    @time_decorator
+    @time_function
     def access_element(self, index):
         return self.arr[index]
         # contohnya 
@@ -16,7 +23,7 @@ class contoh():
         # print(access_element(arr, 2))  # mengakses element pada index ke-2
 
     # contoh O(n) atau Linear Time Complexity
-    @time_decorator
+    @time_function
     def find_max(self):
         max_val = self.arr[0]
         for num in self.arr:
@@ -25,7 +32,7 @@ class contoh():
         return max_val
 
     # contoh O(log n) atau Logarithmic Time Complexity
-    @time_decorator
+    @time_function
     def binary_search(self, target):
         low = 0
         high = len(self.arr) - 1
@@ -40,7 +47,7 @@ class contoh():
         return -1
 
     # contoh O(n^2) atau Quadratic Time Complexity
-    @time_decorator
+    @time_function
     def bubble_sort(self):
         n = len(self.arr)
         for i in range(n):
@@ -49,7 +56,7 @@ class contoh():
                     self.arr[j], self.arr[j + 1] = self.arr[j + 1], self.arr[j]         
 
     # contoh O(n^3) atau Cubic Time Complexity
-    @time_decorator
+    @time_function
     def sum_triplets(self):
         n = len(self.arr)
         total = 0
