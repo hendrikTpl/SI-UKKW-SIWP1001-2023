@@ -32,7 +32,7 @@ def main ():
             # call a method from Examples class here
             # ex.some_method()
 
-if __name__ == "__main__":
+if _name_ == "_main_":
 
     main()
 
@@ -45,8 +45,4 @@ if __name__ == "__main__":
     # t2 = time.time()
     # t_exec = t2 - t1
 
-    # print("Running time of t_constant: {}".format(t_exec))
-
-
-
-
+    # print("Running time of t_constant: {}".format(t_exec)
