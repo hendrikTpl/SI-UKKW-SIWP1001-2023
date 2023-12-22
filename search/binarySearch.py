@@ -30,4 +30,69 @@ class BinarySearch():
     def search(self, nums: List[int], target: int) -> int:
         # write your code here
         pass
+        
+## Add the project root to sys.path
+import sys
+import os
+current_script_path = os.path.abspath(__file__)
+project_root = os.path.dirname(os.path.dirname(current_script_path))
+if project_root not in sys.path:
+    sys.path.append(project_root)
+    import file timer
+    from utils.time_measurement import time_function,  CodeTimer
+    utils/time_measurement.py
+    import functools
+import time
+
+class CodeTimer:
+    def __init__(self, name=None):
+        self.name = f"'{name}'" if name else ''
+
+    def __enter__(self):
+        self.start = time.perf_counter()
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        self.end = time.perf_counter()
+        self.took = (self.end - self.start) * 1000.0
+        print(f"Code block {self.name} took: {self.took:.2f} ms")
+
+def time_function(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+start_time = time.perf_counter()
+        result = func(*args, **kwargs)
+        end_time = time.perf_counter()
+        run_time = (end_time - start_time) * 1000.0
+        print(f"Finished '{func.__name__}' in {run_time:.2f} ms")
+        return result
+    return wrapper
+
+import sys
+import os
+current_script_path = os.path.abspath(__file__)
+project_root = os.path.dirname(os.path.dirname(current_script_path))
+if project_root not in sys.path:
+    sys.path.append(project_root)
+from utils.time_measurement import time_function,  CodeTimer
+
+#measure the line of code
+with CodeTimer('1,2,3,4,5,6,7,8,9,10'):
+    for i in range(10):
+        #do something
+        pass
+#measure function
+@time_function   
+def search(6):
+   pass
+
+left = 0
+right = len (nums)-1
+while left <= right:
+mid = (left + right)//2
+if nums [mid] == target: return mid
+elif nums [mid] < target:
+else:
+left = mid+1
+right = mid-1
+return -1
 
