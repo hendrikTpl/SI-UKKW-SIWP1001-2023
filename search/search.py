@@ -1,18 +1,23 @@
-from typing import List
-from util.decorators import time_decorator
+import sys
+import os
+current_script_path = os.path.abspath(__file__)
+project_root = os.path.dirname(os.path.dirname(current_script_path))
+if project_root not in sys.path:
+    sys.path.append(project_root)
+from util.time_measurement import time_function,  CodeTimer
 
 class Search:
     @staticmethod
-    @time_decorator
-    def ls(list, target):
+    @time_function
+    def linear_search(list, target):
         for i in range(len(list)):
             if list[i] == target:
                 return f"Target {target} is found at index {i}"
         return "Target not found"
 
     @staticmethod
-    @time_decorator
-    def bs(list, target):
+    @time_function
+    def binary_search(list, target):
         list.sort()
         low = 0
         high = len(list) - 1
