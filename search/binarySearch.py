@@ -23,11 +23,10 @@ semua angka di urutkan secara ascending
 
 """
 from typing import List
-from util.decorators import time_decorator
+from utils.time_measurement import time_function,  CodeTimer
 
-class BinarySearch():
-    @time_decorator
+class LinearSearch():
+    @time_function
     def search(self, nums: List[int], target: int) -> int:
-        # write your code here
+        
         pass
-

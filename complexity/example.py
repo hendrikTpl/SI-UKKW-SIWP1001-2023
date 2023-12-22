@@ -1,7 +1,7 @@
 """
 example of time-complexity 
 """
-from util.decorators import time_decorator
+from utils.decorators import time_decorator
 
 class contoh():
     def __init__(self, arr):
