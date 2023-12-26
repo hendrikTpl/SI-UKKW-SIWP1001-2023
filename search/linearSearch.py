@@ -3,10 +3,12 @@ Buat sebuag algorithm LinearSeach
 
 """
 from typing import List
-from util.decorators import time_decorator
+from util.time_measurement import time_function, CodeTimer
 
 class LinearSearch():
-    @time_decorator
-    def search(self, nums: List[int], target: int) -> int:
-        # write your code here
-        pass
+    @time_function
+    def search(nums: List[int], target: int) -> int:
+        for i in range(len(nums)):
+            if nums[i] == target:
+                return i
+        return -1
