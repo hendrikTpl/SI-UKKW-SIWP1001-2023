@@ -7,33 +7,42 @@ tuliskan sebuah fungsi untuk mencari target di dalam nums.
 Jika target ada, maka kembalikan indeksnya. Jika tidak, kembalikan -1.
 
 """
-from typing import List
-from util.decorators import time_decorator
+import sys
+import os
+current_script_path = os.path.abspath(__file__)
+project_root = os.path.dirname(os.path.dirname(current_script_path))
+if project_root not in sys.path:
+    sys.path.append(project_root)
+from util.time_measurement import time_function,  CodeTimer
 
-@time_decorator
-def linear_search(arr, target):
-    for i in range(len(arr)):
-        if arr[i] == target:
-            return i  
-    return -1  
 
-numbers = [4, 2, 5, 1, 7, 3, 6, 8]
-target = 5
+import time
 
-result = linear_search(numbers, target)
 
-if result != -1:
-    print(f"Target {target} found at index: {result}")
+class LinearSearch:
+    def linearSearch(self, List, target):
+        start_time = time.time()
+        i = 0
+        pos = -1
+        while i < len(List):
+            if List[i] == target:
+                pos = i
+                end_time = time.time()
+                runtime = end_time - start_time
+                return True, pos, runtime
+            i = i + 1
+
+        end_time = time.time()
+        runtime = end_time - start_time
+        return False, pos, runtime
+
+List = [3, 5, 7, 9, 11, 13]
+target = 13
+
+linear_search_instance = LinearSearch()
+hasil, pos, runtime = linear_search_instance.linearSearch(List, target)
+
+if hasil:
+    print(f'Found at {pos} waktu eksekusinya :{runtime} detik')
 else:
-    print(f"Target {target} not found in the array.")
-
-numbers = [4, 2, 5, 1, 7, 3, 6, 8]
-target = 9
-
-result = linear_search(numbers, target)
-
-if result != -1:
-    print(f"Target {target} found at index: {result}")
-else:
-    print(f"Target {target} not found in the array.")
-    pass
+    print(f'Not Found waktu eksekusinya :{runtime} detik')

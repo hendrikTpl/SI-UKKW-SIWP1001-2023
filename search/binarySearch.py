@@ -22,28 +22,53 @@
 # semua angka di urutkan secara ascending
 
 # """
-from typing import List
-from util.decorators import time_decorator
-@time_decorator
-def binarySearch(nums, target):
-    left, right = 0, len(nums) - 1
-    
-    while left <= right:
-        mid = left + (right - left) // 2
+import sys
+import os
+current_script_path = os.path.abspath(__file__)
+project_root = os.path.dirname(os.path.dirname(current_script_path))
+if project_root not in sys.path:
+    sys.path.append(project_root)
+from util.time_measurement import time_function,  CodeTimer
+
+
+import time
+
+
+class BinarySearch:
+    def binarySearch(self, data, target):
+        start_time = time.time()
+        low = 0
+        high = len(data) - 1  
+
+        temp = False
+
+        while low <= high and not temp:
+            mid = (low + high) // 2
+
+            if data[mid] == target:
+                temp = True
+                print("Nilai", target, "berada di index ke-", mid)
+            
+            else:
+                if target < data[mid]:
+                    high = mid - 1
+                else:
+                    low = mid + 1
         
-        if nums[mid] == target:
-            return mid
-        elif nums[mid] < target:
-            left = mid + 1
-        else:
-            right = mid - 1
-    
-    return -1
+        end_time = time.time()
+        runtime = end_time - start_time
+        print (f'waktu eksekusinya :{runtime} detik')
+        
+        return temp  
+        
 
-number = [-1, 0, 3, 5, 9, 12]
-target = 9
-print(binarySearch(number, target))
+data = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+target = 80
 
-number2 = [-1, 0, 3, 5, 9, 12]
-target2 = 2
-print(binarySearch(number2, target2))
+binary_search_instance = BinarySearch()
+hasil = binary_search_instance.binarySearch(data, target)
+
+if hasil:
+    print("Nilai", target, "ditemukan")
+else:
+    print("Nilai", target, "tidak ditemukan")
