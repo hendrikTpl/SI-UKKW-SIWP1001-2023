@@ -2,6 +2,7 @@ import time
 import argparse
 import ast
 from complexity.example import contoh
+from search.binarySearch import BinarySearch
 from search.linearSearch import LinearSearch
 #tambahkan disini misalnya from sort.nama_algorithma import nama_fungsinya
 
