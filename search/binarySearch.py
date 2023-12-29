@@ -22,6 +22,7 @@ semua angka harus integer unik
 semua angka di urutkan secara ascending
 
 """
+from typing import List
 import sys
 import os
 current_script_path = os.path.abspath(__file__)
@@ -39,7 +40,7 @@ with CodeTimer('Binary Search'):
 #measure function
 class BinarySearch():
     @time_function
-    def binary_search(self, nums: list[int], target: int) -> int:
+    def binary_search(self, nums: List[int], target: int) -> int:
         low, high = 0, len(nums) - 1
         
         while low <= high:
@@ -52,7 +53,7 @@ class BinarySearch():
                 high = mid - 1
         
         return -1
-        
+
 
 bs = BinarySearch()
 print(bs.binary_search([-1,0,3,5,9,12], 9))

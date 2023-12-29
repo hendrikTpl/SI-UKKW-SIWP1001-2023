@@ -2,6 +2,7 @@
 Buat sebuag algorithm LinearSeach
 
 """
+from typing import List
 import sys
 import os
 current_script_path = os.path.abspath(__file__)
@@ -19,7 +20,7 @@ with CodeTimer('Linear Search'):
 #measure function
 class LinearSearch():
     @time_function
-    def linear_search(self, nums: list[int], target: int) -> int:
+    def linear_search(self, nums: List[int], target: int) -> int:
         for i, num in enumerate(nums):
             if num == target:
                 return i
