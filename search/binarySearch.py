@@ -22,12 +22,16 @@ semua angka harus integer unik
 semua angka di urutkan secara ascending
 
 """
-from typing import List
-from util.decorators import time_decorator
+import sys
+import os
+current_script_path = os.path.abspath(__file__)
+project_root = os.path.dirname(os.path.dirname(current_script_path))
+if project_root not in sys.path:
+    sys.path.append(project_root)
+from util.time_measurement import time_function,  CodeTimer
 
-class BinarySearch():
-    @time_decorator
-    def search(self, nums: List[int], target: int) -> int:
+@time_function
+def binarySearch(nums , target):
         # write your code here
         
         left, right = 0, len(nums) - 1
@@ -42,7 +46,17 @@ class BinarySearch():
                 right = mid - 1
                 
         return -1
-        
-Bsr = BinarySearch()
-print(Bsr.search([-1,0,3,5,9,12],9))
-print(Bsr.search([-1,0,3,5,9,12],2))
+
+
+number = [-1, 0, 3, 5, 9, 12]
+target = 9
+
+with CodeTimer('BinarySearch'):
+     result = binarySearch(number,target)
+
+
+if result != -1:
+    print(f"Target {target} ditemukan {result}.")
+else:
+    print(f"Target {target} tidak ditemukan dalam array.")
+
