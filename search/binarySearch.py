@@ -50,4 +50,3 @@ search_obj = BinarySearch()
 result = search_obj.search(nums, target)
 print(result)
 pass
-
