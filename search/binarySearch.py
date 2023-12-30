@@ -28,6 +28,26 @@ from util.decorators import time_decorator
 class BinarySearch():
     @time_decorator
     def search(self, nums: List[int], target: int) -> int:
-        # write your code here
-        pass
+        left, right = 0, len(nums) - 1
+
+        while left <= right:
+            mid = left + (right - left) // 2
+
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] < target:
+                left = mid + 1
+            else:
+                right = mid - 1
+
+        return -1
+
+# Example usage:
+nums = [0, 3, 5, 6, 9, 11, 15, 18, 23, 31, 36, 42]
+target = 9
+
+search_obj = BinarySearch()
+result = search_obj.search(nums, target)
+print(result)
+pass
 
